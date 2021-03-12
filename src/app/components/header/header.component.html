@@ -1,0 +1,332 @@
+
+
+<!-- Scroll up button -->
+<div #scrollUpBtn class="scroll-up">
+  <span><i class="fa fa-angle-up"></i></span>
+</div>
+
+<!-- Large screen Navbar -->
+<nav class="lg-nav">
+  <div class="top-bar">
+    <div class="container">
+      <ul class="top-bar-nav m-0 list-unstyled">
+        <li>
+          <a class="active main-link" href="#">{{"VISIT" | translate}}</a>
+        </li>
+        <li>
+          <a class="main-link" href="#">{{"TOPBAR.BUSINESS" | translate}}</a>
+        </li>
+        <li>
+          <a class="main-link" href="#">{{"TOPBAR.STUDY" | translate}}</a>
+        </li>
+        <li>
+          <a class="main-link" href="#">{{"TOPBAR.CORPORATE" | translate}}</a>
+        </li>
+        <li>
+          <a class="main-link" href="#">{{"TOPBAR.FESTIVAL" | translate}}</a>
+        </li>
+      </ul>
+
+      <ul class="top-bar-right m-0 list-unstyled">
+        <li *ngIf="!islogged">
+          <a class="main-link" routerLink="/login" >
+            <span><i class="fa fa-user"></i></span>
+            {{"LOGIN" | translate}}
+          </a>
+        </li>
+        <li *ngIf="islogged">
+          <a class="dropdown dropdown-toggle main-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user"></i>
+            {{CurrentUser.firstName}} {{CurrentUser.lastName}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+              <a class="dropdown-item item" routerLink="/account/wishlist" style="margin-left: 3opx">
+                <span><i style="color: #007bff;" class="fa fa-heart"></i></span>
+                Top picks
+              </a>
+              <a class="dropdown-item item" routerLink="/account/dashboard">
+                <span><i class="fa fa-user"></i></span>
+                My Account
+              </a>
+              <a class="dropdown-item item" [routerLink]="['/account/editProfile']">
+                <span><i class="fa fa-user"></i></span>
+                Edit Profile
+              </a>
+              <a class="dropdown-item item" (click)="logout()">
+                Logout
+              </a>
+            </div>
+        </li>
+        <li>
+          <a style="cursor: pointer;" *ngIf=" currentLang != 'ar' " (click)="changeCurrentLang('ar')" class="main-link">
+            <span><i class="fa fa-globe"></i></span>
+            العربية
+          </a>
+          <a style="cursor: pointer;" *ngIf=" currentLang != 'en' " (click)="changeCurrentLang('en')" class="main-link">
+            <span><i class="fa fa-globe"></i></span>
+            English
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div #largeNavbar class="nav-bar">
+    <div class="container">
+      <ul class="m-0 list-unstyled">
+        <a routerLink="/home" class="logo d-block">
+          <img src="assets/images/EXEG.png" alt="">
+        </a>
+        <li class="nav-bar-item has-drop-down" id="dropDown_1">
+          <a class="main-link" routerLink="/explore">
+            {{ "NAVBAR.EXPLORE" | translate}}
+            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
+          </a>
+        </li>
+        <li class="nav-bar-item has-drop-down" id="dropDown_2">
+          <a class="main-link" routerLink="/activities">
+            {{"NAVBAR.ACTIVITIES" | translate}}
+            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
+          </a>
+        </li>
+        <li class="nav-bar-item has-drop-down" id="dropDown_3">
+          <a class="main-link" routerLink="/planProgram">
+            {{"NAVBAR.PLAN" | translate}}
+            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav-bar-icons m-0 list-unstyled">
+        <li class="search-field">
+          <input #searchInp type="text" name="search" class="form-control" placeholder="Search...">
+        </li>
+        <li>
+          <span (click)="searchInp.classList.toggle('show')" class="search"><i class="fa fa-search"></i></span>
+        </li>
+        <li>
+          <a href="#"><span><i class="fa fa-calendar"></i></span></a>
+        </li>
+        <li>
+          <a [routerLink]="['//account/wishlist']" ><span><i class="fa fa-heart"></i></span></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Dropdown menus -->
+
+    <!-- Explore -->
+    <ul class="drop-down-menu" id="drop-down_1">
+      <div class="container">
+        <div class="container-div">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/about">{{"NAVBAR.ABOUT.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.ABOUT.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/culture">{{"NAVBAR.CULTURE.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.CULTURE.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/neighbourhoods">{{"NAVBAR.NEIGHBOURHOODS.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.NEIGHBOURHOODS.DESC" | translate}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <!-- Activities -->
+    <ul class="drop-down-menu" id="drop-down_2">
+      <div class="container">
+        <div class="container-div">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.NEW.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.NEW.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.SIGHTS.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.SIGHTS.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.EXPERIENCES.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.EXPERIENCES.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.ARTS.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.ARTS.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.SHOPPING.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.SHOPPING.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.FOOD.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.FOOD.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.SPAS.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.SPAS.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.ITENERARIES.TITLE" | translate}}
+
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.ITENERARIES.DESC" | translate}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <!-- Plan your trip -->
+    <ul class="drop-down-menu" id="drop-down_3">
+      <div class="container">
+        <div class="container-div">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/planProgram">{{"NAVBAR.PLAN" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.PLAN_TRIP.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/designProgram">{{"NAVBAR.DESIGN_TRIP.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.DESIGN_TRIP.DESC" | translate}}</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/programDetails">{{"NAVBAR.PROGRAM.TITLE" | translate}}
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">{{"NAVBAR.PROGRAM.DESC" | translate}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+<!-- Small screen Navbar -->
+<nav #smallNavbar class="sm-nav">
+  <div class="container">
+    <div class="left">
+      <div #toggler (click)="toggleMenu()" class="toggler">
+        <div class="toggler-btn"></div>
+      </div>
+      <div class="logo">
+        <img src="assets/images/EXEG.png" alt="">
+      </div>
+    </div>
+
+    <ul class="right m-0 list-unstyled">
+      <li>
+        <a href="#"><span><i class="fa fa-calendar"></i></span></a>
+      </li>
+      <li>
+        <a href="#"><span><i class="fa fa-heart"></i></span></a>
+      </li>
+    </ul>
+  </div>
+  <div #smMenu class="sm-menu">
+    <ul class="m-0 list-unstyled">
+      <li class="sm-nav-item">
+        <a href="/explore">{{"NAVBAR.EXPLORE" | translate}}</a>
+      </li>
+      <li class="sm-nav-item">
+        <a routerLink="/activities">{{"NAVBAR.ACTIVITIES" | translate}}</a>
+      </li>
+      <li class="sm-nav-item">
+        <a routerLink="/planProgram">{{"NAVBAR.PLAN" | translate}}</a>
+      </li>
+      <li class="sm-nav-item" *ngIf="!islogged">
+        <a routerLink="/login">
+          <span><span><i class="fa fa-user"></i></span></span>
+          {{"LOGIN" | translate}}
+        </a>
+      </li>
+      <li class="sm-nav-item" *ngIf="islogged">
+        <a routerLink="/account/wishlist">
+          <span><span><i class="fa fa-heart"></i></span></span>
+          Top picks
+        </a>
+      </li>
+      <li class="sm-nav-item" *ngIf="islogged">
+        <a routerLink="/account/dashboard">
+          <span><span><i class="fa fa-user"></i></span></span>
+          My Account
+        </a>
+      </li>
+      <li class="sm-nav-item" *ngIf="islogged">
+        <a [routerLink]="['/account/editProfile']">
+          <span><span><i class="fa fa-user"></i></span></span>
+          Edit Profile
+        </a>
+      </li>
+      <li class="sm-nav-item" *ngIf="islogged">
+        <a (click)="logout()">
+          Logout
+        </a>
+      </li>
+      <li *ngIf=" currentLang != 'ar' " class="sm-nav-item">
+        <a (click)="changeCurrentLang('ar')"><span><i class="fa fa-globe"></i></span>
+          العربية</a>
+      </li>
+      <li *ngIf=" currentLang != 'en' " class="sm-nav-item">
+        <a (click)="changeCurrentLang('en')"><span><i class="fa fa-globe"></i></span>
+          English</a>
+      </li>
+    </ul>
+  </div>
+</nav>

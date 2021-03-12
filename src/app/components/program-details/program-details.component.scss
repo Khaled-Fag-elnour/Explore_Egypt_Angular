@@ -1,0 +1,81 @@
+.rdiv{
+    
+    border-radius:  23% 2% 23% 2%;
+}
+.rdiv h2 , .rdiv p , .rdiv button{
+    padding: 3%;
+    z-index: 1;
+}
+.vd{
+    width: 100%;
+    height: auto;
+    border-bottom-right-radius: 10%;
+}
+@media (max-width :768px){
+    .rdiv{
+        margin-left: 0;
+        border-radius:  0% 0% 23% 2%;
+    } 
+}
+.overlap{
+    margin-left:-200px ;
+}
+
+/* ******************************************** */
+/* .tabels,  .tablet {
+    display: none;
+} */
+.overlap {
+    margin-left: -9%;
+}
+.hr{
+    width: 30%;
+    background-color: orangered;
+    align-self: center;   
+}
+.center{
+    text-align: center;
+}
+.border{
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+// .my-custom-card {
+//   position: relative;
+//   background-size: cover;
+//   height: 320px;
+//   border-radius: 6px;
+//   overflow: hidden;
+//   .overlay-content {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-image: linear-gradient(45deg, rgba(0, 103, 185, 0.85), rgba(255,255,255,0.5));
+//     color: #fff;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     .content {
+//       padding: 10px 8px;
+//     }
+//     .head, .foot {
+//       border-bottom: 1px solid #aaa;
+//       border-top: 1px solid #aaa;
+//       padding: 8px;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+//   }
+//   .price {
+//     color: gold;
+//   }
+// }

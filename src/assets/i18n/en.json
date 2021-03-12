@@ -1,0 +1,68 @@
+{
+  "TOPBAR": {
+    "BUSINESS": "Business in Egypt",
+    "STUDY": "Study Egypt",
+    "CORPORATE": "Corporate",
+    "FESTIVAL": "Egypt Shopping festival"
+  },
+  "NAVBAR": {
+    "EXPLORE": "Explore Egypt",
+    "EXPLORE_DESC": "Egypt is a city that needs to be seen to be believed. Find out all you need to know about the place of endless possibilities.",
+    "ACTIVITIES": "Activities",
+    "PLAN": "Plan Your Trip",
+
+    "ABOUT": {"TITLE": "About Egypt", "DESC": "Welcome to a sun-soaked metropolis like no other"},
+    "CULTURE": {"TITLE": "Culture & Heritage", "DESC": "Admire the city's traditional arts, crafts and cultural gems"},
+    "NEIGHBOURHOODS": {"TITLE": "Neighbourhoods in Egypt", "DESC": "Every district in Egypt tells its own unique story"},
+
+    "NEW": {"TITLE": "New & Trending", "DESC": "Visit the latest hotspots, openings and attractions"},
+    "SIGHTS": {"TITLE": "Sights & Attractions", "DESC": "Marvel at record-breaking venues and iconic landmarks"},
+    "EXPERIENCES": {"TITLE": "Experiences", "DESC": "Embark on thrilling new adventures for all ages"},
+    "ARTS": {"TITLE": "Arts & Culture", "DESC": "Uncover the city’s rich heritage and vibrant arts scene"},
+    "SHOPPING": {"TITLE": "Shopping", "DESC": "Find new surprises at modern malls and traditional souks"},
+    "FOOD": {"TITLE": "Food & Drink", "DESC": "Taste award-winning world flavours and local cuisine"},
+    "SPAS": {"TITLE": "Spas & Wellness", "DESC": "Unwind at Dubai's luxury spas and wellbeing havens"},
+    "ITENERARIES": {"TITLE": "Iteneraries", "DESC": "What do you travel for? Find inspiration with our itineraries"},
+
+    "PLAN_TRIP": {"TITLE": "Plan your trip", "DESC": "Plan ahead for a hassle-free travel experience"},
+    "DESIGN_TRIP": {"TITLE": "Design your program", "DESC": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae."},
+    "PROGRAM": {"TITLE": "Your program", "DESC": "Lorem ipsum dolor sit, amet consectetur adipisicing elit."}
+  },
+
+
+
+  "VISIT": "Visit Egypt",
+  "LOGIN": "Login",
+  "SAFETY": "Your safety is our priority.",
+  "ADVISORY": "Read our travel advisory on coronavirus (COVID-19).",
+  "STAY_UPDATED": "Stay Updated",
+  "GET_UPDATES": "Get the latest updates on things to do in Egypt",
+  "EMAIL_PLACEHOLDER": "Your Email Address",
+  "SUBSCRIBE": "Subscribe",
+  "INFORMATION": "All information provided will be handled in accordance with our",
+  "PRIVACY": "Privacy policy",
+  "DOWNLOAD_APP": "Download our app",
+  "GET_APP": "Get visit Egypt",
+
+  "POPULAR": "Popular Links",
+  "HELPFUL": "Helpful Information",
+  "RELATED": "Related Sites",
+  "COPYRIGHT": "Copyright © 2020. All rights reserved",
+  "TERMS": "Terms of use",
+  "COOKIES": "Cookies policy",
+  "TODO": "Things to do",
+  "ABOUT_PAGE_WELCOME": "Welcome to Egypt - where anything is possible.",
+  "ABOUT_PAGE_P": "Egypt is today one of the most cosmopolitan cities in the world. Egypt is home to many nationalities and offers a truly memorable experience to all visitors. Whether it is by the Giza Pyramids, or at the top of the Burj alQahera, Egypt lives and breathes a sense of possibility and innovation. And with an unparalleled coastline, beautiful desert and magnificent cityscapes, memories are just waiting to be made here.",
+  "BRIEF_HISTORY": "A brief history of Egypt",
+  "SELECT_YEAR": "Select a year to discover the story of Egypt",
+  "FACTS": "Quick Facts",
+  "KEEP_EXPLORING": "Keep Exploring",
+  "KEEP_EXPLORING_P": "If seeing is believing, why not take a closer look?",
+  "DISCOVER_MORE": "Discover More",
+  "LOREM": "Lorem ipsum dolor sit amet, adipisicing elit.",
+  "LOREM_LONG": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quidem veritatis officiis blanditiis repudiandae quasi magni doloremque, asperiores minus perferendis laboriosam cupiditate labore eveniet! Accusamus.",
+  "FEATURED_N_HOODS": "Featured Neighbourhoods",
+  "JOURNEY_TITLE": "Your journey starts here.",
+  "JOURNEY_DESC": "See how Egypt evolved into the modern destination it is today.",
+  "BUY_NOW": "Buy Now"
+}
